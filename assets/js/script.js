@@ -18,6 +18,7 @@ function searchCity(cityName) {
     apiUrl += "&appid="
     apiUrl += apiKey;
 
+    console.log(apiUrl);
     fetch(apiUrl)
         .then(function (response) {
             return response.json();
