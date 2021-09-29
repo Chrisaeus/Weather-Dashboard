@@ -13,7 +13,7 @@ searchForm.addEventListener("submit", function(event) {
 });
 
 function searchCity(cityName) {
-    let apiUrl = "api.openweathermap.org/data/2.5/weather?q=";
+    let apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=";
     apiUrl += cityName;
     apiUrl += "&appid="
     apiUrl += apiKey;
