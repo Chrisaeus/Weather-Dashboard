@@ -39,6 +39,64 @@ main {
     height: 1000px;
     width: 75%;
     flex-direction: column;
+    margin: 10px;
+    visibility: hidden;
+}
+
+.currentWeatherData {
+    border: 1px solid black;
+    height: 25%;
+    /* margin: 10px; */
+}
+
+.currentWeatherData h2 {
+    margin: 8px 5px;
+    display: inline-block;
+}
+
+.currentWeatherData .conditionIcon {
+    position: absolute;
+}
+
+.currentWeatherData h3 {
+    margin: 20px 5px;
+}
+
+.uvIndex {
+    font-family: monospace;
+    color: white;
+}
+
+.fiveDayForecast {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.forecastBox {
+    width: 175px;
+    height: 200px;
+    color: white;
+    background-color: cornflowerblue;
+    margin-bottom: 10px;
+    /* display: inline-flex; */
+    /* justify-content: space-around; */
+}
+
+.forecastBox h3 {
+    font-size: 1.5em;
+    margin: 7px 5px;
+}
+
+.conditionIcon {
+    height: 60px;
+    width: 60px;
+}
+
+.forecastBox p {
+    color: inherit;
+    margin: 5px;
 }
 
 input {
@@ -49,7 +107,7 @@ input {
     width: 95%;
 }
 
-#searchBtn {
+button {
     font-size: 1em;
     padding: 5px;
     margin: 0 3px;
@@ -60,7 +118,7 @@ input {
     color: white;
 }
 
-#searchBtn:active {
+#searchBtn:active, .selectedBtn {
     background-color: rgba(100, 148, 237, 0.575);
     
 }

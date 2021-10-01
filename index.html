@@ -15,15 +15,19 @@
             <section class="searchCol">
                 <form id="searchForm">
                     <label for="searchBar"><h2>Search for a City:</h2></label>
-                    <input type="text" name="searchBar" id="searchBar" placeholder="Seattle" /><br>
+                    <input type="text" name="searchBar" id="searchBar" placeholder="Enter a city name" /><br>
                     <button id="searchBtn">Search</button>
                 </form>
-                <hr>
+                <hr id="divider" style="visibility: hidden">
+                <section id="savedList"></section>
             </section>
             <section class="resultCol">
-                
+                <div class="currentWeatherData"></div>
+                <h2>5-Day Forecast:</h2>
+                <section class="fiveDayForecast"></section>
             </section>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
