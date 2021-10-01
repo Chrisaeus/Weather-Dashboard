@@ -30,13 +30,24 @@ main {
 
 .searchCol {
     /* background-color: skyblue; */
-    height: 1000px;
+    /* height: 1000px; */
     width: 25%;
     flex-direction: column;
 }
 
+#clear {
+    vertical-align: super;
+    font-size: .75em;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline;
+}
+
+
 .resultCol {
-    height: 1000px;
+    height: 100%;
     width: 75%;
     flex-direction: column;
     margin: 10px;

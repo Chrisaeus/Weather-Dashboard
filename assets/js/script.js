@@ -5,6 +5,7 @@ const searchBar = document.querySelector("#searchBar");
 const searchForm = document.querySelector("#searchForm");
 const divider = document.querySelector("#divider");
 const savedList = document.querySelector("#savedList");
+const clearBtn = document.querySelector("#clear");
 const resultCol = document.querySelector(".resultCol");
 const weatherBox = document.querySelector(".currentWeatherData");
 const forecastArea = document.querySelector(".fiveDayForecast");
@@ -30,6 +31,16 @@ searchForm.addEventListener("submit", function(event) {
         searchBar.value = "";
     }
     
+});
+
+clear.addEventListener("click", function() {
+
+    savedCities = [];
+    localStorage.removeItem("Saved Cities");
+    divider.setAttribute("style", "visibility: hidden");
+    clear.setAttribute("style", "visibility: hidden");
+    savedList.innerHTML = "";
+
 });
 
 function searchCity(cityName) {
@@ -87,17 +98,23 @@ function saveCity(cityName) {
 function showSaved() {
 
     divider.setAttribute("style", "visibility: visible");
+    clear.setAttribute("style", "visibility: visible");
     savedList.innerHTML = "";
 
     for (let city of savedCities) {
+
         let cityBtn = savedList.appendChild(document.createElement("button"));
         cityBtn.setAttribute("style", "margin-bottom: 5px");
         cityBtn.innerHTML = city;
-        console.log(city);
-        console.log(weatherData.city);
+        
         if (weatherData.city == city) {
             cityBtn.setAttribute("class", "selectedBtn");
         }
+
+        cityBtn.addEventListener("click", function() {
+            searchCity(city);
+        });
+
     }
 
 }
